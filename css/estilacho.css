@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: #fff;
+}
+.checkbox {
+  display: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.header-container {
+  width: 90%;
+  position: relative;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  width: 10rem;
+  height: 8rem;
+  position: fixed;
+  left: 85%;
+  top: 1rem;
+}
+.btn-label {
+  width: 2rem;
+  height: 1.4rem;
+}
+.header-button {
+  width: 2rem;
+  height: 0.2rem;
+  background: #000;
+  position: absolute;    
+  top: 1.9rem;  
+  transition: all 0.2s;
+}
+.header-button::before,
+.header-button::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: #000;
+  position: absolute;
+  top: -0.6rem;
+  transition: all 0.2s;
+}
+.header-button::after {
+  top: 0.6rem;
+}
+.menu {
+  background: #fff095;
+  width: 100%;
+  height: 11rem;
+  position: fixed;
+  z-index: 5;
+  top: -15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 2rem;
+  transition: all 0.8s;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 0.4rem;
+}
+a {
+  margin: 0 1rem;
+  color: #000;
+  text-decoration: none;
+}
+.checkbox:checked ~ .menu {
+  background: #fff;
+  top: 0rem;
+}
+.checkbox:checked + header .header-container label .header-button {
+  background: none;
+}
+.checkbox:checked + header .header-container label .header-button::before {
+  transform: rotate(35deg);
+  top: 0;
+}
+.checkbox:checked + header .header-container label .header-button::after {
+  transform: rotate(-35deg);
+  top: 0;
+}
+/*menu fin*/
+/* EMPIEZA EL VENDITO FORM */
+form .textos-header{
+    display: flex;
+    height: 450px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+form {
+    width: 100%;
+    height: 600px;
+    background: #fff095;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/grano.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(51, 100%, 50%, 0.459), hsla(51, 45%, 52%, 0.664)), url(../img/grano.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+/* clasico FORM */
+/* main*/
+/*empiesa el cogeme los huevos del main*/
+.about-services{
+    background: #fff;
+    padding-bottom: 30px;
+}
+.imagen-about-es{
+    width: 50%;
+}
+.kow_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.kow {
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/fon_a.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(60, 100%, 62%, 0.608), hsla(60, 109%, 72%, 0.7)), url(../img/fon_a.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 22rem;
+    white-space:nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.low {
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/fon_b.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(21, 45%, 43%, 0.608), hsla(22, 46%, 52%, 0.7)), url(../img/fon_b.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 22rem;
+    white-space:nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.low_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+.textos-header h3{
+    font-size: 90px;
+    color:#fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 80%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(60,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 150px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+.img-port{
+    width: 80%;
+    height: 70%;
+    left: 3rem;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.img-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.img-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+.hover-gale{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(21,43%,47%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-gale img{
+    width: 150px;
+}
+
+.hover-gale p{
+    color: #fff;
+}
+
+.img-port:hover .hover-gale{
+    transform: scale(1);
+}
+.pow {
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/fon_c.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(22, 80%, 55%, 0.608), hsla(23, 79%, 52%, 0.7)), url(../img/fon_c.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 22rem;
+    white-space:nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.imgen-port{
+    width: 90%;
+    height: 95%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imgen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hover-galria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(22,80%,66%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galria img{
+    width: 150px;
+}
+
+.hover-galria p{
+    color: #fff;
+}
+
+.imgen-port:hover .hover-galria{
+    transform: scale(1);
+}
+/* APARTIR DE AQUI EMPIEZA EL FOOTER*/
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #ffff00;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+.copyright {
+    color: #ccc;
+}
+    /*aqui termina el footer*/

@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: #fff;
+}
+.checkbox {
+  display: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.header-container {
+  width: 90%;
+  position: relative;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  width: 10rem;
+  height: 8rem;
+  position: fixed;
+  left: 85%;
+  top: 1rem;
+}
+.btn-label {
+  width: 2rem;
+  height: 1.4rem;
+}
+.header-button {
+  width: 2rem;
+  height: 0.2rem;
+  background: #000;
+  position: absolute;    
+  top: 1.9rem;  
+  transition: all 0.2s;
+}
+.header-button::before,
+.header-button::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: #000;
+  position: absolute;
+  top: -0.6rem;
+  transition: all 0.2s;
+}
+.header-button::after {
+  top: 0.6rem;
+}
+.menu {
+  background: #fff095;
+  width: 100%;
+  height: 11rem;
+  position: fixed;
+  z-index: 5;
+  top: -15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 2rem;
+  transition: all 0.8s;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 0.4rem;
+}
+a {
+  margin: 0 1rem;
+  color: #000;
+  text-decoration: none;
+}
+.checkbox:checked ~ .menu {
+  background: #fff;
+  top: 0rem;
+}
+.checkbox:checked + header .header-container label .header-button {
+  background: none;
+}
+.checkbox:checked + header .header-container label .header-button::before {
+  transform: rotate(35deg);
+  top: 0;
+}
+.checkbox:checked + header .header-container label .header-button::after {
+  transform: rotate(-35deg);
+  top: 0;
+}
+/*slider*/
+.slider{
+  background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/fon_a.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(60, 100%, 62%, 0.608), hsla(60, 109%, 72%, 0.7)), url(../img/fon_a.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.slider ul{
+  display: flex;
+  padding: 0%;
+  width: 200%;
+  animation: cambio 4s infinite alternate steps(1);
+  align-items: right;
+}
+
+.slider li{
+  width:70%;
+  list-style: none;
+  
+}
+.slider img{
+  align-items: right;
+  width: 60%;
+}
+@keyframes cambio{
+  0%{margin-left: 0%;}
+  20%{margin-left: 0%;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+ 
+.subtitle{
+        font-size: 1.8rem;
+    }
+}
+
+.price{
+    text-align: center;
+}
+
+.price__table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price__element{
+    background-image: url(../vay+/galle.gif);
+    background-size:cover;;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #fff;
+    --color-price: #ffff09;
+    --bg-cta: #fff;
+    --color-cta: #5454D4;
+    --color-items: #fff;
+}
+
+.price__element--best{
+    width: 370px;
+    padding: 60px 40px;
+    background-image: url(../vay+/cho.gif);
+    background-size:cover;
+    --color-plan: rgb(255 255 255 / 75%);
+    --color-price: #fff;
+    --bg-cta: #9F3919;
+    --color-cta: #FFF;
+    --color-items: #fff;
+}
+
+
+.price__name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.price__price{
+    font-size: 2.5rem;
+    color: var(--color-price);
+}
+
+.price__items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+.price__cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+}
+
+/*menu fin*/
+/* EMPIEZA EL VENDITO FORM */
+form .textos-header{
+    display: flex;
+    height: 450px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+form {
+    width: 100%;
+    height: 600px;
+    background: #fff095;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../vay+/tazota.gif);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(51, 100%, 50%, 0.459), hsla(51, 45%, 52%, 0.664)), url(../vay+/tazota.gif);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+/* clasico FORM */
+
+/* APARTIR DE AQUI EMPIEZA EL FOOTER*/
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #ffff00;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+.copyright {
+    color: #ccc;
+}
+    /*aqui termina el footer*/

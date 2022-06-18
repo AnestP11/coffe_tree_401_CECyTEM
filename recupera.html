@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC"-// W3C // DTD XHTML 1.0 Transitional // EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"content="text/html;charset=iso-8859-1"/>
+<title>Documento sint&iacute;tulo</title>
+    <link rel="stylesheet" href="./css/Forma_loging.css">
+</head>
+<body>
+    div class="login__container">
+       <div class="login__top">
+          <h2 class="login__title">Recupera tu <span>Contraseña</span></h2>
+       </div>
+        
+        <form action="loging.php" method="post" class="login__form">
+            <input type="text" placeholder="&#128100; usuario" name="usuario" required autofocus>
+            <input type="password" placeholder="&#x1F512; Contrasena" name="cont" required>
+            <input class="btn__submit" type="submit" name="register" value="ENTRAR">
+            <a class="form__recover" href="loging.html">Ya me acorde regresame</a>
+        </form>
+    <div class="capa"></div>
+    <?php
+ include("Registrar.php");
+?>
+    </body>
+</html>
